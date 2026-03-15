@@ -61,7 +61,7 @@ const Statistics = ({ good, neutral, bad, total, score }) => {
             </div>
         )
     }
-
+    
     return (
         <table>
             <tbody>
