@@ -92,6 +92,7 @@ const App = () => {
     if (window.confirm(`Do you wish to delete ${name}?`)) {
       PersonService.remove(id).then(() => {
         setPersons(persons.filter((p) => p.id !== id));
+        console.log(setPersons);
       });
     }
   };
@@ -99,8 +100,8 @@ const App = () => {
   return (
     <div>
       <h2>Phonebook</h2>
-      <Notification message={success} />
-      <Notification message={error} />
+      <Notification message={success} type="success"/>
+      <Notification message={error} type="error"/>
       <Find value={find} onChange={handleFind} />
       <h2>add a new</h2>
       <AddForm
